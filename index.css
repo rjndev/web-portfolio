@@ -432,11 +432,14 @@ nav li a {
     position: absolute;
     overflow-x: hidden;
     overflow-y: hidden;
+    margin-top: 0;
   }
 
   .hero {
     position: relative;
-    z-index: -1;
+    height: 100vh;
+    width: auto;
+    z-index: 1;
   }
 }
 
@@ -444,6 +447,17 @@ nav li a {
   .react-img-bg {
     top: 45vh;
     left: 30vw;
+  }
+
+  .gallery-container {
+    width: 640px;
+    height: 480px;
+    overflow-y: hidden;
+  }
+
+  video {
+    width: 640px;
+    height: 480px;
   }
 }
 
