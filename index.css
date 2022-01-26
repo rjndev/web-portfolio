@@ -281,6 +281,37 @@ nav li a {
     fill: white;
   }
 
+  .tech-exp div .row div .bootstrap {
+    padding-top: 5px;
+    font-size: 9px;
+  }
+
+  .tech-exp div .row div .express {
+    padding-top: 5px;
+    font-size: 9px;
+  }
+
+  .tech-exp div .row div .nodejs {
+    padding-top: 5px;
+    font-size: 9px;
+  }
+  .tech-exp div .row div .godot {
+    padding-top: 5px;
+    font-size: 9px;
+  }
+  .tech-exp div .row div .unity {
+    padding-top: 5px;
+    font-size: 9px;
+  }
+  .vue {
+    padding-top: 3px;
+    font-size: 9px;
+  }
+  .tech-exp div .row div .react {
+    padding-top: 5px;
+    font-size: 9px;
+  }
+
   header {
     overflow-y: visible;
   }
