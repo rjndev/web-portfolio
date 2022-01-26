@@ -4,11 +4,47 @@
   --nav-color2: #6290c8;
 }
 
+:root {
+  overflow-x: hidden;
+}
+
 html {
-  width: 100vw;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.super-container {
+  overflow-x: hidden;
+}
+
+h1,
+h4,
+h2 {
+  overflow-y: hidden;
+}
+
+header {
   scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-anchor: none;
+}
+
+.hero {
+  overflow-x: clip;
+  overflow-anchor: none;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.purple {
+  color: purple;
 }
 
 hr {
@@ -28,28 +64,30 @@ hr {
   color: #405977;
 }
 
-nav li {
+nav .burger ul li {
   list-style: none;
+}
+
+nav .burger ul li a:hover {
+  text-decoration: none;
+  color: yellow;
 }
 
 nav {
   /* /background-image: linear-gradient(#376996, #6290c8); */
   background-color: #4f6d92;
   z-index: 5;
-  position: fixed;
-  width: 100%;
+  position: absolute;
+  overflow-x: hidden;
 }
 
-nav ul {
+nav .burger ul {
   font-size: 24px;
 }
 
 nav li a {
   text-decoration: none;
   color: white;
-}
-
-body {
 }
 
 .hero {
@@ -70,7 +108,9 @@ body {
   width: 45%;
   height: 75vh;
   z-index: -1;
-  animation: loadImage 2s forwards;
+  animation: loadImage 3.2s forwards;
+  overflow-x: hidden;
+  overflow-wrap: unset;
 }
 
 .arrow-down-section svg {
@@ -90,6 +130,10 @@ body {
   animation: rotate-center 0.6s ease-in-out both;
 }
 
+.percent-hide {
+  display: none;
+}
+
 .hero .social-icons a i {
   font-size: 45px;
 }
@@ -97,18 +141,21 @@ body {
 .about-me {
   background-color: #376996;
   opacity: 1;
+  overflow-x: hidden;
 }
 
 .about-me-content {
+  overflow-x: hidden;
 }
 
 .scroll {
   opacity: 0;
+  overflow-x: hidden;
 }
 
 .show {
   opacity: 1;
-  animation: showContent 1s ease-in-out forwards;
+  animation: showContent 1.3s ease-in-out forwards;
 }
 
 .lang-exp {
@@ -120,12 +167,15 @@ body {
   top: 25vh;
   left: 70vw;
   background: url("./images/logo.svg");
-  background-size: cover;
+  background-size: unset;
   background-repeat: no-repeat;
   width: 800px;
   height: 60vh;
   z-index: 0;
   animation: react-logo-spin infinite 20s linear;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-anchor: auto;
 }
 
 .tech-exp {
@@ -142,13 +192,270 @@ body {
   font-size: 32px;
 }
 
-.contact div div {
-  background-color: burlywood;
-}
-
 .contact {
   background-color: #376996;
   margin-top: 5rem;
+}
+
+/* @media screen and (min-width: 320px) {
+  .left-content {
+    width: 100%;
+    color: white;
+  }
+  .left-content div h2 {
+    font-size: 28px;
+  }
+  .left-content div h3 {
+    font-size: 16px;
+  }
+
+  .nav {
+    width: fit-content;
+  }
+
+  .div-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("./images/safar-safarov-koOdUvfGr4c-unsplash.jpg");
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: 20%;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    animation: loadImage 3.2s forwards;
+    overflow-x: hidden;
+    overflow-anchor: none;
+    width: 100%;
+  }
+  .social-icons a i {
+    color: white;
+  }
+} */
+/* 
+@media screen and (min-width: 720px) {
+  .left-content {
+    width: 50%;
+    color: #405977;
+  }
+  .div-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    background: url("./images/safar-safarov-koOdUvfGr4c-unsplash.jpg");
+    background-size: cover;
+    width: 45%;
+    height: 75vh;
+    z-index: -1;
+    animation: loadImage 3.2s forwards;
+  }
+
+  .left-content div h2 {
+    font-size: 42px;
+  }
+  .left-content div h3 {
+    font-size: 36px;
+  }
+
+  .social-icons a i {
+    color: #405977;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .about-me div h1 {
+    font-size: x-large;
+  }
+
+  header {
+    overflow-y: visible;
+  }
+
+  .small-menu {
+    position: relative;
+    z-index: 100;
+  }
+
+  .about-me div h4 {
+    font-size: medium;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .about-me-content {
+    overflow-y: hidden;
+  }
+  .container {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+
+  .gallery-content {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .gallery-content h1 {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .gallery {
+    overflow-x: hidden;
+  }
+
+  .left-content {
+    width: 100%;
+    color: white;
+  }
+
+  .left-content div h2 {
+    font-size: 28px;
+  }
+  .left-content div h3 {
+    font-size: 16px;
+  }
+
+  .social-icons a i {
+    color: white;
+  }
+
+  body {
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-wrap: unset;
+  }
+
+  nav .burger ul {
+    display: flex;
+    width: 100vw;
+  }
+
+  nav .burger ul li {
+    font-size: 8px;
+  }
+
+  .react-img-bg {
+    position: fixed;
+    top: 30vh;
+    left: 0;
+    background: url("./images/logo.svg");
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 70vh;
+    z-index: 0;
+    animation: react-logo-spin infinite 20s linear;
+    overflow: hidden;
+  }
+
+  .div-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("./images/safar-safarov-koOdUvfGr4c-unsplash.jpg");
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: 20%;
+    width: 100%;
+    height: 100vh;
+    z-index: -4;
+    animation: loadImage 3.2s forwards;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .lang-exp h2 {
+    font-size: x-large;
+  }
+
+  .lang-exp div .row div h4 {
+    font-size: small;
+  }
+
+  .about-me .lang-exp .row div i {
+    font-size: 20px;
+  }
+
+  .about-me .tech-exp .row div i {
+    font-size: 20px;
+  }
+
+  .tech-exp div .row div h4 {
+    font-size: small;
+  }
+  .col-1 {
+    display: none;
+  }
+  .lang-exp div .row div .js {
+  }
+
+  nav h2 {
+    font-size: larger;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .gallery {
+    position: relative;
+    overflow: hidden;
+  }
+
+  nav {
+    padding: 0;
+    position: absolute;
+    z-index: 5;
+    overflow-y: visible;
+  }
+
+  .gallery-container {
+    width: 320px;
+    height: 400px;
+    overflow-y: hidden;
+  }
+
+  video {
+    width: 320px;
+    height: 400px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+    overflow-x: hidden;
+    overflow-wrap: unset;
+  }
+
+  .contact {
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .hero {
+    position: relative;
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .react-img-bg {
+    top: 45vh;
+    left: 30vw;
+  }
+}
+
+@media screen and (min-width: 1028px) {
+  .react-img-bg {
+    top: 35vh;
+    left: 70vw;
+  }
+  .left-content {
+    width: 50%;
+    color: #405977;
+  }
 }
 
 @keyframes loadImage {

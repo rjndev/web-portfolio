@@ -6,7 +6,8 @@ const observer = new IntersectionObserver(entries => {
 	entries.forEach(entry => {
 		entry.target.classList.toggle('show', entry.isIntersecting)
 	})
-	console.log(entries);
+}, {
+	threshold: 0.2
 })
 
 container.forEach(c => {
